@@ -10,20 +10,16 @@
 
 <body>
 
-
-
-    <hr>
-
     <!--CONTAINER-->
-    <div style="display:flex;justify-content:center;align-items:center">
+    <div class="container">
 
         <!--LEFT SIDE-->
-        <div style="width:30%; text-align:center">
+        <div class="box--left">
             <h2>logo</h2>
         </div>
 
         <!--RIGHT SIDE-->
-        <div style="position:relative; width:70%; background-color:black">
+        <div class="box--right">
 
             <!--SVG MAP-->
             <svg version="1.1" baseProfile="basic" id="Mapa" xmlns="http://www.w3.org/2000/svg"
@@ -209,13 +205,53 @@
             <div id="modal--b4b" class="modal">
 
                 <div class="modal-content">
-                    <button type="button" class="close">&times;</button>
-                    <div style='display:flex;flex-direction:column;justify-content:center;align-items:center; gap:5px'>
+                    <button id='close-b4b' type="button" class="btn--close">&times;</button>
+                    <!--Left Box-->
+                    <div class="modal-content--left">
+                        <img src="assets/images/dom.jpeg" alt="zdjęcie budynku" loading='lazy'>
+                    </div>
+                    <!--Right Box-->
+                    <div class="modal-content--right">
 
-                        <h4>Dom w Poznaniu</h4>
-                        <span>250m</span>
-                        <strong>1234567zł</strong>
-                        <a href="https://marketingmix.pl" style="margin-bottom:1em">link</a>
+                        <div class="text-container">
+                            <div class="text-box">
+                                <h2>Działka/Domek b4b</h2>
+                                <h3>Lorem ipsum dolor sit</h3>
+                            </div>
+                            <div class="text-box">
+                                <span>cena ofertowa:</span>
+                                <h4>7,000,000 PLN</h4>
+                            </div>
+                            <!-- <div class="text-box">
+                                <div>
+                                    <div style="display:flex;justify-content:center;align-items:center">
+
+                                        <svg fill="#1C2033" width="15" height="15" version="1.1" id="lni_lni-home"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;"
+                                            xml:space="preserve">
+                                            <g>
+                                                <path d="M56.4,62.3H43.3c-3.2,0-5.9-2.6-5.9-5.9V45.8c0-0.8-0.6-1.4-1.4-1.4h-8c-0.8,0-1.4,0.6-1.4,1.4v10.6c0,3.3-2.6,5.9-5.9,5.9
+                    H7.6c-3.2,0-5.9-2.6-5.9-5.9V22.7c0-1.7,0.8-3.2,2.2-4.1L29.4,2.5c1.6-1,3.6-1,5.1,0L60,18.7c1.4,0.9,2.2,2.4,2.2,4.1v33.6
+                    C62.3,59.6,59.6,62.3,56.4,62.3z M28,39.9h8c3.3,0,5.9,2.6,5.9,5.9v10.6c0,0.8,0.6,1.4,1.4,1.4h13.1c0.8,0,1.4-0.6,1.4-1.4V22.7
+                    c0-0.1-0.1-0.2-0.1-0.3L32.1,6.3c-0.1-0.1-0.2-0.1-0.3,0L6.4,22.4c-0.1,0.1-0.2,0.2-0.2,0.3v33.7c0,0.8,0.6,1.4,1.4,1.4h13.1
+                    c0.8,0,1.4-0.6,1.4-1.4V45.8C22.1,42.6,24.7,39.9,28,39.9z" />
+                                            </g>
+                                        </svg>
+                                        <span>Lorem, ipsum.</span>
+                                        <div>12</div>
+                                    </div>
+                                </div>
+
+                            </div> -->
+                            <button type='button' class="btn--info">
+                                
+                                <a href="https://marketingmix.pl" target="_blank">Sprawdź</a>
+                            </button>
+
+
+                        </div>
 
 
 
@@ -224,14 +260,58 @@
             </div>
             <!--Modal B4A-->
             <div id="modal--b4a" class="modal">
-                <div class="modal-content">
-                    <button class="close close1">&times;</button>
-                    <div style='display:flex;flex-direction:column;justify-content:center;align-items:center; gap:5px'>
 
-                        <h4>Dom w Bydgoszczy</h4>
-                        <span>250m</span>
-                        <strong>Przepiękny</strong>
-                        <a href="https://marketingmix.pl" style="margin-bottom:1em">link</a>
+                <div class="modal-content">
+                    <button id="close-b4a" type="button" class="btn--close">&times;</button>
+                    <!--Left Box-->
+                    <div class="modal-content--left">
+                        <img src="assets/images/dom.jpeg" alt="zdjęcie budynku" loading='lazy'>
+                    </div>
+                    <!--Right Box-->
+                    <div class="modal-content--right">
+
+                        <div class="text-container">
+                            <div class="text-box">
+                                <h2>Działka/Domek b4a</h2>
+                                <h3>Lorem ipsum dolor sit</h3>
+                            </div>
+                            <div class="text-box">
+                                <span>cena ofertowa:</span>
+                                <h4>7,000,000 PLN</h4>
+                            </div>
+                            <!-- <div class="text-box">
+                                <div>
+                                    <div style="display:flex;justify-content:center;align-items:center">
+
+                                        <svg fill="#1C2033" width="15" height="15" version="1.1" id="lni_lni-home"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;"
+                                            xml:space="preserve">
+                                            <g>
+                                                <path d="M56.4,62.3H43.3c-3.2,0-5.9-2.6-5.9-5.9V45.8c0-0.8-0.6-1.4-1.4-1.4h-8c-0.8,0-1.4,0.6-1.4,1.4v10.6c0,3.3-2.6,5.9-5.9,5.9
+                    H7.6c-3.2,0-5.9-2.6-5.9-5.9V22.7c0-1.7,0.8-3.2,2.2-4.1L29.4,2.5c1.6-1,3.6-1,5.1,0L60,18.7c1.4,0.9,2.2,2.4,2.2,4.1v33.6
+                    C62.3,59.6,59.6,62.3,56.4,62.3z M28,39.9h8c3.3,0,5.9,2.6,5.9,5.9v10.6c0,0.8,0.6,1.4,1.4,1.4h13.1c0.8,0,1.4-0.6,1.4-1.4V22.7
+                    c0-0.1-0.1-0.2-0.1-0.3L32.1,6.3c-0.1-0.1-0.2-0.1-0.3,0L6.4,22.4c-0.1,0.1-0.2,0.2-0.2,0.3v33.7c0,0.8,0.6,1.4,1.4,1.4h13.1
+                    c0.8,0,1.4-0.6,1.4-1.4V45.8C22.1,42.6,24.7,39.9,28,39.9z" />
+                                            </g>
+                                        </svg>
+                                        <span>Lorem, ipsum.</span>
+                                        <div>12</div>
+                                    </div>
+                                </div>
+
+                            </div> -->
+                            <button type='button' class="btn--info">
+                                
+                                <a href="https://marketingmix.pl" target="_blank">Sprawdź</a>
+                            </button>
+
+
+                        </div>
+
+
+
                     </div>
                 </div>
             </div>

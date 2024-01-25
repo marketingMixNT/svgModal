@@ -28,8 +28,8 @@ const modal2 = document.querySelector("#modal--b4a");
 
 
 
-const closeBtn = document.getElementsByClassName("close")[0];
-const closeBtn2 = document.querySelector('.close1');
+const closeBtn = document.querySelector("#close-b4b");
+const closeBtn2 = document.querySelector('#close-b4a');
 
 // const showModal = (modal)=>{
 //     modal.classList.add('show-modal');}
