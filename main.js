@@ -44,7 +44,6 @@
 // 	modal.classList.toggle('show-modal')
 // }
 
-
 // //LISTENERS
 
 // plot.addEventListener('click', () => modalHandler(modal))
@@ -74,29 +73,30 @@
 // modal7.addEventListener('click', () => modalHandler(modal7))
 // modal8.addEventListener('click', () => modalHandler(modal8))
 
-
 // FUNCTION FOR GENERATES SELECTORS
-const selectById = (prefix, suffix) =>{
-    return document.querySelector(`#${prefix}${suffix}`);
+const selectById = (prefix, suffix) => {
+	return document.querySelector(`#${prefix}${suffix}`)
 }
 
 // ARRAYS WITH SELECTORS (if new insert here)
-const plotSuffixes = ['b4b', 'b4a', 'b3b', 'b3a', 'b2b', 'b2a', 'b1b', 'b1a', 'a3b', 'a3a', 'a2b', 'a2a', 'a1b', 'a1a'];
-const modalSuffixes = plotSuffixes.map(suffix => `modal--${suffix}`);
-const closeBtnSuffixes = plotSuffixes.map(suffix => `close-${suffix}`);
+const plotSuffixes = ['b4b', 'b4a', 'b3b', 'b3a', 'b2b', 'b2a', 'b1b', 'b1a', 'a3b', 'a3a', 'a2b', 'a2a', 'a1b', 'a1a']
+const modalSuffixes = plotSuffixes.map(suffix => `modal--${suffix}`)
+
 
 // MODAL FUNCTION
 const modalHandler = modal => {
-    modal.classList.toggle('show-modal');
-};
+	modal.classList.toggle('show-modal')
+}
 
 // FOREACH LISTENERS
-plotSuffixes.forEach((suffix) => {
-    const plot = selectById('', suffix);
-    const modal = selectById('modal--', suffix);
-    const closeBtn = selectById('close-', suffix);
+plotSuffixes.forEach(suffix => {
+	const plot = selectById('', suffix)
+	const modal = selectById('modal--', suffix)
 
-    plot.addEventListener('click', () => modalHandler(modal));
-    closeBtn.addEventListener('click', () => modalHandler(modal));
-    modal.addEventListener('click', () => modalHandler(modal));
-});
+
+		plot.addEventListener('click', () => modalHandler(modal))
+	
+	if (modal) {
+		modal.addEventListener('click', () => modalHandler(modal))
+	}
+})
