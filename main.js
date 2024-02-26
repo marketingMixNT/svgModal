@@ -78,10 +78,8 @@ const selectById = (prefix, suffix) => {
 	return document.querySelector(`#${prefix}${suffix}`)
 }
 
-// ARRAYS WITH SELECTORS (if new insert here)
+// ARRAY WITH SELECTORS (if new insert here)
 const plotSuffixes = ['b4b', 'b4a', 'b3b', 'b3a', 'b2b', 'b2a', 'b1b', 'b1a', 'a3b', 'a3a', 'a2b', 'a2a', 'a1b', 'a1a']
-const modalSuffixes = plotSuffixes.map(suffix => `modal--${suffix}`)
-
 
 // MODAL FUNCTION
 const modalHandler = modal => {
@@ -89,14 +87,14 @@ const modalHandler = modal => {
 }
 
 // FOREACH LISTENERS
-plotSuffixes.forEach(suffix => {
-	const plot = selectById('', suffix)
-	const modal = selectById('modal--', suffix)
-
+window.onload = () => {
+	plotSuffixes.forEach(suffix => {
+		const plot = selectById('', suffix)
+		const modal = selectById('modal--', suffix)
 
 		plot.addEventListener('click', () => modalHandler(modal))
-	
-	if (modal) {
-		modal.addEventListener('click', () => modalHandler(modal))
-	}
-})
+		if (modal) {
+			modal.addEventListener('click', () => modalHandler(modal))
+		}
+	})
+}
